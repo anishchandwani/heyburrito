@@ -1,7 +1,6 @@
 import * as log from 'bog';
 import config from '../config';
 import { pathExists, createPath } from './utils';
-import themeHandler from './themeHandler';
 
 export default async () => {
     log.level(config.misc.log_level);
@@ -16,7 +15,7 @@ export default async () => {
         log.debug('themeUrl:', config.theme.url);
     }
     log.debug('=====================');
-    await themeHandler();
+    // await themeHandler();
     // check if database is file
     if (config.db.db_driver === 'file') {
         log.info('Database driver is file');
